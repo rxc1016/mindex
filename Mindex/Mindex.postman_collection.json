@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "af634b3f-332c-43d5-8b6a-e84040f23bd3",
+		"name": "Mindex",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Existing Employee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/employee/16a596ae-edd3-4847-99fe-c4518e82c86f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee",
+						"16a596ae-edd3-4847-99fe-c4518e82c86f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New Employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Peter\",\r\n    \"lastName\": \"Parker\",\r\n    \"position\": \"Photographer\",\r\n    \"department\": \"Daily Bugle\",\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/employee/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Newly Created Employee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/employee/31e5b32d-e251-496c-9f90-d1647ac18a93",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee",
+						"31e5b32d-e251-496c-9f90-d1647ac18a93"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Reporting Structure",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/employee/16a596ae-edd3-4847-99fe-c4518e82c86f/reporting",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee",
+						"16a596ae-edd3-4847-99fe-c4518e82c86f",
+						"reporting"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Compensation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Salary\": \"101999\",\r\n    \"EffectiveDate\": \"4-12-2022\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/employee/31e5b32d-e251-496c-9f90-d1647ac18a93/compensation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee",
+						"31e5b32d-e251-496c-9f90-d1647ac18a93",
+						"compensation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Newly Created Compensation",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
